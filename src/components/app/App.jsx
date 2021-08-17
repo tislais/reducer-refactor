@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { record } from '../state/actions';
+import { record, undo } from '../state/actions';
 import { initialState, reducer } from '../state/reducer';
 
 // const useRecord = (init) => {
@@ -38,10 +38,10 @@ function App() {
 
   return (
     <>
-      {/* <button 
-        data-testid="undo"
-        onClick={undo}>undo</button>
       <button 
+        data-testid="undo"
+        onClick={() => dispatch(undo())}>undo</button>
+      {/* <button 
         data-testid="redo"
         onClick={redo}>redo</button> */}
       <input

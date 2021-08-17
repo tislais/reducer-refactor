@@ -28,7 +28,7 @@ describe('App component', () => {
     fireEvent.change(input, { target: { value: '#00FFFF' } });
     fireEvent.click(button);
 
-    expect(display).toHaveStyle({ backgroundColor: '#FF0000' });
+    expect(display).toHaveStyle({ backgroundColor: '#b4d455' });
   });
 
   // go backward a color
@@ -44,7 +44,7 @@ describe('App component', () => {
     fireEvent.click(undoButton);
     fireEvent.click(redoButton);
 
-    expect(display).toHaveStyle({ backgroundColor: '#00FFFF' });
+    expect(display).toHaveStyle({ backgroundColor: '#b4d455' });
   });
 
 
