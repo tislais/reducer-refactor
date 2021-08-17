@@ -35,8 +35,12 @@ function App() {
 
   return (
     <>
-      <button onClick={undo}>undo</button>
-      <button onClick={redo}>redo</button>
+      <button 
+        data-testid="undo"
+        onClick={undo}>undo</button>
+      <button 
+        data-testid="redo"
+        onClick={redo}>redo</button>
       <input
         data-testid="input"
         type="color"
