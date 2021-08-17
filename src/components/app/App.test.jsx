@@ -44,7 +44,7 @@ describe('App component', () => {
     fireEvent.click(undoButton);
     fireEvent.click(redoButton);
 
-    expect(display).toHaveStyle({ backgroundColor: '#b4d455' });
+    expect(display).toHaveStyle({ backgroundColor: '#00FFFF' });
   });
 
 

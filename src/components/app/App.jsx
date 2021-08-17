@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { record, undo } from '../state/actions';
+import { record, undo, redo } from '../state/actions';
 import { initialState, reducer } from '../state/reducer';
 
 // const useRecord = (init) => {
@@ -41,9 +41,9 @@ function App() {
       <button 
         data-testid="undo"
         onClick={() => dispatch(undo())}>undo</button>
-      {/* <button 
+      <button 
         data-testid="redo"
-        onClick={redo}>redo</button> */}
+        onClick={() => dispatch(redo())}>redo</button>
       <input
         data-testid="input"
         type="color"
