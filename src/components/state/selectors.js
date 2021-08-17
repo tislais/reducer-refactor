@@ -1,1 +1,1 @@
-export const getCurrent = (state) => state.getCurrent;
+export const getCurrent = (state) => state.current;

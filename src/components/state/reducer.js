@@ -1,10 +1,11 @@
+
 export const initialState = {
-  current: '',
+  current: '#b4d455',
 };
 
 export function reducer(state, action) {
   switch(action.type) {
-    case 'GET_CURRENT':
+    case 'RECORD':
       return { ...state, current: action.payload };
     default:
       return state;

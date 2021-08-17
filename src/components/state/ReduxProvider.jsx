@@ -16,3 +16,8 @@ export const ReduxProvider = ({ reducer, initialState, children }) => {
     </ ReduxContext.Provider>
   );
 };
+
+export const useSelector = (selectorFn) => {
+  const { state } = useContext(ReduxContext);
+  return (selectorFn(state));
+};
