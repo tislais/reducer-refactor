@@ -30,6 +30,22 @@ describe('App component', () => {
 
     expect(display).toHaveStyle({ backgroundColor: '#FF0000' });
   });
+
   // go backward a color
+  it('displays the next color when the redo button is clicked', () => {
+    render(<App />);
+
+    const display = screen.getByRole('display');
+    const undoButton = screen.getByTestId('undo');
+    const redoButton = screen.getByTestId('redo');
+    const input = screen.getByTestId('input');
+
+    fireEvent.change(input, { target: { value: '#00FFFF' } });
+    fireEvent.click(undoButton);
+    fireEvent.click(redoButton);
+
+    expect(display).toHaveStyle({ backgroundColor: '#00FFFF' });
+  });
+
 
 });
